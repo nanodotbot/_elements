@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elements</title>
+    <link rel="icon" href="./favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Mulish:wght@200&family=Open+Sans:wght@300&family=Source+Code+Pro:wght@300&family=Fira+Code:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/general.css">
+    <script src="./js/textarea.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>elements</h1>
+    </header>
+
+    <nav id="nav">
+        <a href="#article">article</a>
+        <a href="#blockquote">blockquote</a>
+        <a href="#link">link</a>
+        <a href="#input">input, textarea & button</a>
+        <a href="#code">code</a>
+        <a href="#picture">picture</a>
+        <a href="#video">video</a>
+        <a href="#audio">audio</a>
+        <a href="#lists">lists</a>
+        <a href="#table">table</a>
+        <a href="#table2">table 2</a>
+        <a href="#range">input: range</a>
+        <a href="#range">input: checkbox</a>
+        <a href="#date">input: date</a>
+        <a href="#meterprogress">meter & progress</a>
+    </nav>
+
+    <main>
+        <article id="article">
+            <h2>just an article</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores molestias ullam ipsam numquam eius commodi fugiat labore amet hic, animi natus illo voluptatum inventore temporibus repellat accusamus magni dolorem aspernatur.</p>
+        </article>
+
+
+        <article id="blockquote">
+            <h2>blockquote</h2>
+            <figure>
+                <blockquote>
+                    &laquo;Our highest endeavor must be to develop free human beings who are able of themselves to impart purpose and direction to their lives. The need for imagination, a sense of truth, and a feeling of responsibility—these three forces are the very nerve of education.&raquo;
+                </blockquote>
+                <figcaption>
+                    Rudolph Steiner
+                </figcaption>
+            </figure>
+        </article>
+
+
+        <article id="link">
+            <h2>link</h2>
+            <a href="#">link</a>
+        </article>
+
+
+        <article id="input">
+            <h2>input, textarea & button</h2>
+            <section>
+                <label for="input-1">input 1</label>
+                <input type="text"name="input-1" id="input-1">
+                <label for="textarea-1">textarea 1</label>
+                <textarea name="textarea-1" id="textarea-1" class="textarea"></textarea>
+                <button>button</button>
+            </section>
+        </article>
+
+
+        <article id="code">
+            <h2>code</h2>
+<pre class="code-block"><code><span class="code-keyword">var</span> <span class="code-variable">textarea</span> = <span class="code-variable">document</span>.<span class="code-function">getElementsByTagName</span>(<span class="code-string">'textarea'</span>);
+
+<span class="code-variable">console</span>.<span class="code-function">log</span>(<span class="code-variable">textarea</span>); <span class="code-comment">/* a cookie for the whale */</span>
+                
+for (<span class="code-keyword">let</span> i = <span class="code-number">0</span>; i < textarea.<span class="code-function">length</span>; i++) {
+    textarea[i].<span class="code-function">oninput</span> = () => {
+        textarea[i].style.height = ''; // reset  height
+        textarea[i].style.height = textarea[i].scrollHeight + "px";
+    };
+}
+</code></pre>
+        </article>
+
+
+        <article id="picture">
+            <h2>picture</h2>
+            <figure>
+                <img src='./media/miau.jpg' alt='a miau' />
+                <figcaption>a rubber duck</figcaption>
+            </figure>
+        </article>
+
+
+        <article id="video">
+            <h2>video</h2>
+            <video controls loop>
+                <source src='./media/A Majesty in Monochrome - Rolls Royce Wraith Black Badge.mp4' type='video/mp4'>
+                <!-- <source src='./media/A Majesty in Monochrome - Rolls Royce Wraith Black Badge (1080p_25fps_H264-128kbit_AAC).mp4.ogg' type='video/ogg'> -->
+                Your browser does not support the video tag.
+            </video>
+        </article>
+
+
+        <article id="audio">
+            <h2>audio</h2>
+            <audio controls loop>
+                <source src='./media/Tom Deis - No Stopping Me.opus' type='audio/mp3'>
+                Your browser does not support the audio tag.
+            </audio>
+        </article>
+
+
+        <article id="lists">
+            <h2>unordered list</h2>
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+            </ul>
+            <h2>ordered list</h2>
+            <ol>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+                <li>List item 4</li>
+                <li>List item 5</li>
+            </ol>    
+        </article>
+
+
+        <article id="table">
+            <h2>table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>first header</th>
+                        <th>second header</th>
+                        <th>third header</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan='2'>two columns body</td>
+                        <td rowspan='2'>one column<br>two rows body</td>
+                    </tr>
+                    <tr>
+                        <td>one column|row body</td>
+                        <td>one column|row body</td>
+                    </tr>
+                    <tr>
+                        <td>one column|row body</td>
+                        <td>one column|row body</td>
+                        <td>one column|row body</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>first footer</td>
+                        <td>second footer</td>
+                        <td>thirt footer</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </article>
+
+
+        <article id="table2">
+            <h2>table 2</h2>
+            <table>
+                <thead>
+                    <tr class="table-2-tr">
+                        <th>first header</th>
+                        <th>second header</th>
+                        <th>third header</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-2-tr">
+                        <td colspan='2'>two columns body</td>
+                        <td rowspan='2'>one column<br>two rows body</td>
+                    </tr>
+                    <tr class="table-2-tr">
+                        <td>one column|row body</td>
+                        <td>one column|row body</td>
+                    </tr>
+                    <tr class="table-2-tr">
+                        <td>one column|row body</td>
+                        <td>one column|row body</td>
+                        <td>one column|row body</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr class="table-2-tr">
+                        <td>first footer</td>
+                        <td>second footer</td>
+                        <td>thirt footer</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </article>
+
+
+        <article id="range">
+            <h2>input: range</h2>
+            <input type="range" min="0" max="100" value="50">
+        </article>
+
+
+        <article id="checkbox">
+            <h2>input: checkbox</h2>
+            <input type="checkbox">
+        </article>
+
+
+        <article id="date">
+            <h2>input: date</h2>
+            <label for="birthday">birthday</label>
+            <input type="date" id="birthday" name="date">
+        </article>
+
+
+        <article id="meterprogress">
+            <h2>meter & progress</h2>
+            <label for="iq">iq</label>
+            <meter id="iq"
+            minvalue="55"
+            maxvalue="145"
+            value="130"
+            low="84"
+            high="116"
+            optimum="130">
+                116
+            </meter>
+            <label for="upload">upload progress</label>
+            <progress id="upload" value="32" max="100">
+                32%
+            </progress>
+        </article>
+
+
+    </main>
+</body>
+</html>
