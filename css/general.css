@@ -316,6 +316,10 @@
     --an-rgb-color: rgba(0, 0, 0);
     --an-rgba-color: rgba(0, 0, 0, 0.1);
 
+    --default-font-size: 1.8rem;
+    --medium-font-size: 1.6rem;
+    --small-font-size: 1.3rem;
+
     /* Code */
 
     --code-background: var(--shade-2);
@@ -369,7 +373,7 @@ html,
     margin-block-end: 0;
 
     font-family: 'Karla', 'Mulish', 'Open Sans', 'Calibri Light', Calibri, sans-serif;
-    font-size: 1.8rem;
+    font-size: var(--default-font-size);
     line-height: 1.6;
 
     color: var(--text);
@@ -479,8 +483,8 @@ video {
     /* transition: var(--transition-fast); */
 }
 
-figcaption {
-    font-size: 1.5rem;
+figcaption { /* maybe change */
+    font-size: var(--medium-font-size);
     text-align: left;
 
     margin-top: 1rem;
@@ -608,7 +612,7 @@ input[type="checkbox"] {
 }
 
 label {
-    font-size: 1.3rem;
+    font-size: var(--small-font-size);
 }
 
 button {
@@ -633,12 +637,18 @@ button:hover {
 
 blockquote {
     margin-top: 1rem;
-
+}
+blockquote > p {
     padding-left: 1rem;
     padding-right: 1rem;
     border-left: .1rem solid var(--link);
-
     font-style: italic;
+}
+blockquote > cite {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: var(--medium-font-size);
+    font-style: normal;
 }
 
 ul {
