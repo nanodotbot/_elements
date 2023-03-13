@@ -331,14 +331,11 @@
     --code-string: var(--alizarin-300);
     --code-number: var(--emerald-200);
     --code-punctuation: var(--tint-12);
-    --code-tag: var(--peter-river-300); /* TODO: */
-    --code-attr-name: var(--peter-river-300); /* TODO: */
-    --code-attr-value: var(--peter-river-300); /* TODO: */
-    --code-entity: var(--peter-river-300); /* TODO: */
-    --code-regex: var(--peter-river-300); /* TODO: */
-    --code-operator: var(--tint-12);
-    --code-variable: var(--peter-river-200);
-    --code-atrule: var(--peter-river-300); /* TODO: */
+    --code-tag: var(--peter-river-400);
+    --code-attr-name: var(--peter-river-300)
+    --code-attr-value: var(--alizarin-300);
+    --code-entity: var(--sunflower-200);
+    --code-variable: var(--peter-river-300);
     --code-attr-value: var(--peter-river-300); /* TODO: */
 }
 
